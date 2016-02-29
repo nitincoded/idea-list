@@ -5,3 +5,7 @@ Say you are visiting a city and are just so totally bored. What do you do? Hit u
 # Blood Donor Registration
 
 Register as a blood donor, submit a sample & look up the results, and read about the latest blood requirements at emergency wards closest to you.
+
+# Food Truck Locator
+
+Get a notification when a food truck event is happening near you. Filter out trucks that you don't want to follow.
