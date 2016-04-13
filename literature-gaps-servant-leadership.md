@@ -25,3 +25,7 @@
 * How does effective decision-making work for followers in servant-led organizations? Does consensus leadership play a role? How is conflict resolution addressed in this type of leadership?
 * Cross-disciplinary approach: How does servant leadership resonate with other management concepts, for instance, a learner-centered approach or learning organization, knowledge management, innovation, creativity, complex adaptive systems (CAS), spirituality in the workplace, etc., for followers in servant-led organizations?
 * Does servant leadership have a role to play in the context of disability in diversity management?
+
+## Notes
+
+See http://youtu.be/uj0wGObYu-Y for an overview of servant leadership.
