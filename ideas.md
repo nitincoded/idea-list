@@ -13,3 +13,7 @@ Get a notification when a food truck event is happening near you. Filter out tru
 # List browser
 
 Display term-definition markdown lists in a master-detail layout app. The raw markdown would have a pound with the term on one line, followed by text that serves as the definition, much like this list! This would turn a lot of the md files on Github including this one into an app! It would be cool if it doesn't have a web crawler component to convert the md into JSON, but if it did, oh well, might as well hack something together now rather than just an idea that never gets implemented.
+
+# Incident Geographical Mapper
+
+Display incidents on a map, with different color marker for each class, and filtering.
