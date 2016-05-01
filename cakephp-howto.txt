@@ -1,0 +1,13 @@
+composer create-project cakephp/app <project-name-here>
+
+composer require --dev cakephp/bake
+
+bin/cake bake migration Create<Entity-Name> <column1>:type <column2>:type created modified
+
+bin/cake migrations migrate
+
+#bin/cake migrations rollback
+
+bin/cale bake all <table-name>
+
+cake server
