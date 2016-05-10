@@ -2,7 +2,9 @@ composer create-project cakephp/app <project-name-here>
 
 composer require --dev cakephp/bake
 
-bin/cake bake migration Create<Entity-Name> <column1>:type <column2>:type created modified
+bin/cake bake migration Create<Entity-Name> <column1>:<type> <column2>:<type> created modified
+
+bin/cake bake migration Add<Col-Name>To<Entity-Name> <column3>:<type>
 
 bin/cake migrations migrate
 
