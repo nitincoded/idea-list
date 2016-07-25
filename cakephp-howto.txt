@@ -21,6 +21,10 @@ bin/cake server
 bin/cake bake migration CreateUser email:string password:string
 
 Add the _setPassword hashing function to the User model
+    protected function _setPassword($value) {
+        $hasher = new DefaultPasswordHasher();
+        return $hasher->hash($value);
+    }
 
 Implement login/logout in UsersController
 
