@@ -1,3 +1,5 @@
+-=[ Create Project ]=-
+
 composer create-project cakephp/app <project-name-here>
 
 composer require --dev cakephp/bake
@@ -10,6 +12,18 @@ bin/cake migrations migrate
 
 #bin/cake migrations rollback
 
-bin/cale bake all <table-name>
+bin/cake bake all <table-name>
 
-cake server
+bin/cake server
+
+-=[ Authentication ]=-
+
+bin/cake bake migration CreateUser email:string password:string
+
+Add the _setPassword hashing function to the User model
+
+Implement login/logout in UsersController
+
+Load the Auth component in AppController's initialize method
+
+Create the login view for Users
