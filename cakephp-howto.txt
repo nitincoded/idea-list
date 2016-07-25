@@ -21,13 +21,56 @@ bin/cake server
 bin/cake bake migration CreateUser email:string password:string
 
 Add the _setPassword hashing function to the User model
+    use Cake\Auth\DefaultPasswordHasher;
     protected function _setPassword($value) {
         $hasher = new DefaultPasswordHasher();
         return $hasher->hash($value);
     }
 
 Implement login/logout in UsersController
+    public function login() {
+        if ($this->request->is('post')) {
+            $user = $this->Auth->identify();
+            if ($user) {
+                $this->Auth->setUser($user);
+                return $this->redirect($this->Auth->redirectUrl());
+            }
+            $this->Flash->error('Invalid username or password');
+        }
+    }
+    public function logout() {
+        $this->Flash->success('You are now logged out');
+        return $this->redirect($this->Auth->logout());
+    }
 
 Load the Auth component in AppController's initialize method
+    public function initialize()
+    {
+        parent::initialize();
+        $this->loadComponent('RequestHandler');
+        $this->loadComponent('Flash');
+        $this->loadComponent('Auth', [
+            'authenticate' => [
+                'Form' => [
+                    'fields' => [
+                        'username' => 'email',
+                        'password' => 'password'
+                    ]
+                ]
+            ],
+            'loginAction' => [
+                'controller' => 'Users',
+                'action' => 'login'
+            ]
+        ]);
+    }
 
 Create the login view for Users
+  <div class="container">
+  <h2>Login</h2>
+  <?= $this->Form->create() ?>
+  <?= $this->Form->input('email') ?>
+  <?= $this->Form->input('password') ?>
+  <?= $this->Form->button('Login') ?>
+  <?= $this->Form->end() ?>
+  </div>
