@@ -1,0 +1,25 @@
+-=[ Create Project ]=-
+
+composer create-project laravel/laravel <project-name-here>
+
+composer require laravelcollective/html
+
+'providers' => ['Collective\Html\HtmlServiceProvider']
+
+'aliases' => ['Form' => 'Collective\Html\FormFacade', 'Html' => 'Collective\Html\HtmlFacade']
+
+php artisan make:model <Entity> [--migration]
+
+//for generating migrations separately
+php artisan make:migration create_<entity>_table --table=<tablename>
+
+php artisan migrate
+
+php artisan make:controller <Entity>Controller [--resource]
+
+php artisan serve
+
+--
+
+Also see InfyOm Laravel Generator
+https://github.com/InfyOmLabs/laravel-generator
