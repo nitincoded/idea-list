@@ -1,0 +1,10 @@
+composer global require drush/drush
+drush dl drupal-8
+drush site-install standard --account-name=admin --account-pass=password --db-url=mysql://username:password@localhost/mydb
+drush runserver
+
+
+
+Content Type, Views built into Drupal 8
+
+In View select filter with export, Advanced, Expose as form, use the form in a block layout to create a filter (Eg. sidebar filter)
